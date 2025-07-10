@@ -1,0 +1,48 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{E9E4F6E9-A68D-42DB-9C8B-8418A15F0AB3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RealTimeButtonDemo.API", "src\RealTimeButtonDemo.API\RealTimeButtonDemo.API.csproj", "{10D5EF36-3DF5-4DC5-AC42-BC5E5F861893}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RealTimeButtonDemo.Web", "src\RealTimeButtonDemo.Web\RealTimeButtonDemo.Web.csproj", "{FB52D900-25D0-4A2A-9657-F2433EF76E8A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RealTimeButtonDemo.Shared", "src\RealTimeButtonDemo.Shared\RealTimeButtonDemo.Shared.csproj", "{95D19D11-A6DF-4063-8D07-4A95665A3056}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RealTimeButtonDemo.Mobile", "src\RealTimeButtonDemo.Mobile\RealTimeButtonDemo.Mobile.csproj", "{FA859839-4311-437A-9A69-B85A620265CB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{10D5EF36-3DF5-4DC5-AC42-BC5E5F861893}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{10D5EF36-3DF5-4DC5-AC42-BC5E5F861893}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{10D5EF36-3DF5-4DC5-AC42-BC5E5F861893}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{10D5EF36-3DF5-4DC5-AC42-BC5E5F861893}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FB52D900-25D0-4A2A-9657-F2433EF76E8A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB52D900-25D0-4A2A-9657-F2433EF76E8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB52D900-25D0-4A2A-9657-F2433EF76E8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB52D900-25D0-4A2A-9657-F2433EF76E8A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{95D19D11-A6DF-4063-8D07-4A95665A3056}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{95D19D11-A6DF-4063-8D07-4A95665A3056}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{95D19D11-A6DF-4063-8D07-4A95665A3056}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{95D19D11-A6DF-4063-8D07-4A95665A3056}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FA859839-4311-437A-9A69-B85A620265CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA859839-4311-437A-9A69-B85A620265CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA859839-4311-437A-9A69-B85A620265CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA859839-4311-437A-9A69-B85A620265CB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{10D5EF36-3DF5-4DC5-AC42-BC5E5F861893} = {E9E4F6E9-A68D-42DB-9C8B-8418A15F0AB3}
+		{FB52D900-25D0-4A2A-9657-F2433EF76E8A} = {E9E4F6E9-A68D-42DB-9C8B-8418A15F0AB3}
+		{95D19D11-A6DF-4063-8D07-4A95665A3056} = {E9E4F6E9-A68D-42DB-9C8B-8418A15F0AB3}
+		{FA859839-4311-437A-9A69-B85A620265CB} = {E9E4F6E9-A68D-42DB-9C8B-8418A15F0AB3}
+	EndGlobalSection
+EndGlobal

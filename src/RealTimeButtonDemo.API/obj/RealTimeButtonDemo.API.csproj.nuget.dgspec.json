@@ -1,0 +1,161 @@
+{
+  "format": 1,
+  "restore": {
+    "/home/cihat/RealTimeButtonDemo/src/RealTimeButtonDemo.API/RealTimeButtonDemo.API.csproj": {}
+  },
+  "projects": {
+    "/home/cihat/RealTimeButtonDemo/src/RealTimeButtonDemo.API/RealTimeButtonDemo.API.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/cihat/RealTimeButtonDemo/src/RealTimeButtonDemo.API/RealTimeButtonDemo.API.csproj",
+        "projectName": "RealTimeButtonDemo.API",
+        "projectPath": "/home/cihat/RealTimeButtonDemo/src/RealTimeButtonDemo.API/RealTimeButtonDemo.API.csproj",
+        "packagesPath": "/home/cihat/.nuget/packages/",
+        "outputPath": "/home/cihat/RealTimeButtonDemo/src/RealTimeButtonDemo.API/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/cihat/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "/home/cihat/.dotnet/library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "/home/cihat/RealTimeButtonDemo/src/RealTimeButtonDemo.Shared/RealTimeButtonDemo.Shared.csproj": {
+                "projectPath": "/home/cihat/RealTimeButtonDemo/src/RealTimeButtonDemo.Shared/RealTimeButtonDemo.Shared.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[8.0.10, )"
+            },
+            "Microsoft.AspNetCore.OpenApi": {
+              "target": "Package",
+              "version": "[8.0.17, )"
+            },
+            "Microsoft.AspNetCore.SignalR": {
+              "target": "Package",
+              "version": "[1.2.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[9.0.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[9.0.7, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.6.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/home/cihat/.dotnet/sdk/8.0.411/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/cihat/RealTimeButtonDemo/src/RealTimeButtonDemo.Shared/RealTimeButtonDemo.Shared.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/cihat/RealTimeButtonDemo/src/RealTimeButtonDemo.Shared/RealTimeButtonDemo.Shared.csproj",
+        "projectName": "RealTimeButtonDemo.Shared",
+        "projectPath": "/home/cihat/RealTimeButtonDemo/src/RealTimeButtonDemo.Shared/RealTimeButtonDemo.Shared.csproj",
+        "packagesPath": "/home/cihat/.nuget/packages/",
+        "outputPath": "/home/cihat/RealTimeButtonDemo/src/RealTimeButtonDemo.Shared/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/cihat/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "/home/cihat/.dotnet/library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/home/cihat/.dotnet/sdk/8.0.411/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

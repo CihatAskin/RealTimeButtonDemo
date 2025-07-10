@@ -1,0 +1,116 @@
+@page "/dashboard"
+@using RealTimeButtonDemo.Web.Components
+@using RealTimeButtonDemo.Web.Services
+@inject AuthenticationService AuthService
+@inject NavigationManager Navigation
+
+<AuthorizeRoute>
+    <div class="dashboard-container">
+        <div class="dashboard-header">
+            <div class="d-flex justify-content-between align-items-center">
+                <h1>Real-Time Button Dashboard</h1>
+                <div class="user-info">
+                    <span class="me-3">Welcome, <strong>@username</strong>!</span>
+                    <button class="btn btn-outline-secondary btn-sm" @onclick="Logout">
+                        Logout
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                <div class="card">
+                    <div class="card-body">
+                        <SharedButton RoomId="demo-room" Token="@token" />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-4">
+            <div class="col-md-10 offset-md-1">
+                <div class="info-panel">
+                    <h4>How it works:</h4>
+                    <ul>
+                        <li>Click the button to change its color randomly</li>
+                        <li>Use the color palette below to set specific colors</li>
+                        <li>Open multiple browser tabs to see real-time synchronization</li>
+                        <li>All connected users see the same button state instantly</li>
+                    </ul>
+                    
+                    <div class="mt-3">
+                        <h5>Technical Details:</h5>
+                        <ul class="text-muted">
+                            <li><strong>Backend:</strong> ASP.NET Core Web API + SignalR Hub</li>
+                            <li><strong>Frontend:</strong> Blazor WebAssembly</li>
+                            <li><strong>Database:</strong> SQLite with Entity Framework Core</li>
+                            <li><strong>Authentication:</strong> JWT Bearer Token</li>
+                            <li><strong>Real-time:</strong> SignalR WebSocket connection</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</AuthorizeRoute>
+
+@code {
+    private string username = "";
+    private string token = "";
+
+    protected override async Task OnInitializedAsync()
+    {
+        token = await AuthService.GetTokenAsync() ?? "";
+        username = await AuthService.GetUsernameAsync() ?? "";
+    }
+
+    private async Task Logout()
+    {
+        await AuthService.LogoutAsync();
+        Navigation.NavigateTo("/login");
+    }
+}
+
+<style>
+    .dashboard-container {
+        padding: 20px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .dashboard-header {
+        margin-bottom: 30px;
+        padding-bottom: 20px;
+        border-bottom: 1px solid #dee2e6;
+    }
+
+    .user-info {
+        display: flex;
+        align-items: center;
+    }
+
+    .info-panel {
+        background-color: #f8f9fa;
+        padding: 20px;
+        border-radius: 8px;
+        border-left: 4px solid #007bff;
+    }
+
+    .info-panel h4, .info-panel h5 {
+        color: #495057;
+    }
+
+    .info-panel ul {
+        margin-bottom: 0;
+    }
+
+    .info-panel li {
+        margin-bottom: 8px;
+    }
+
+    .card {
+        border: none;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+</style>

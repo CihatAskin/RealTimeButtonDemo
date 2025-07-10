@@ -1,0 +1,80 @@
+@page "/"
+@inject NavigationManager Navigation
+
+<PageTitle>Real-Time Button Demo</PageTitle>
+
+<div class="hero-section">
+    <div class="container text-center">
+        <h1 class="display-4 mb-4">Real-Time Button Demo</h1>
+        <p class="lead mb-4">
+            Experience real-time synchronization with SignalR, Blazor WebAssembly, and ASP.NET Core
+        </p>
+        
+        <div class="d-grid gap-2 d-md-block">
+            <button class="btn btn-primary btn-lg me-md-3" @onclick="GoToLogin">
+                Get Started
+            </button>
+            <button class="btn btn-outline-secondary btn-lg" @onclick="GoToDashboard">
+                Dashboard
+            </button>
+        </div>
+
+        <div class="mt-5">
+            <h3>Features</h3>
+            <div class="row mt-4">
+                <div class="col-md-4">
+                    <div class="feature-card">
+                        <h5>🔄 Real-Time Sync</h5>
+                        <p>SignalR WebSocket connection for instant updates across all connected clients</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card">
+                        <h5>🔐 JWT Authentication</h5>
+                        <p>Secure authentication with Bearer token validation</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card">
+                        <h5>⚡ Blazor WebAssembly</h5>
+                        <p>Modern web UI framework running in browser via WebAssembly</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@code {
+    private void GoToLogin()
+    {
+        Navigation.NavigateTo("/login");
+    }
+
+    private void GoToDashboard()
+    {
+        Navigation.NavigateTo("/dashboard");
+    }
+}
+
+<style>
+    .hero-section {
+        min-height: 80vh;
+        display: flex;
+        align-items: center;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+    }
+
+    .feature-card {
+        background: rgba(255, 255, 255, 0.1);
+        padding: 20px;
+        border-radius: 10px;
+        margin-bottom: 20px;
+        backdrop-filter: blur(10px);
+    }
+
+    .feature-card h5 {
+        margin-bottom: 15px;
+    }
+</style>

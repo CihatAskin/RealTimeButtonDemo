@@ -1,0 +1,6 @@
+@RealTimeButtonDemo.API_HostAddress = http://localhost:5293
+
+GET {{RealTimeButtonDemo.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

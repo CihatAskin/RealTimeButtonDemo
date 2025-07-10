@@ -1,0 +1,11 @@
+/home/cihat/RealTimeButtonDemo/src/RealTimeButtonDemo.Shared/bin/Debug/net8.0/RealTimeButtonDemo.Shared.deps.json
+/home/cihat/RealTimeButtonDemo/src/RealTimeButtonDemo.Shared/bin/Debug/net8.0/RealTimeButtonDemo.Shared.dll
+/home/cihat/RealTimeButtonDemo/src/RealTimeButtonDemo.Shared/bin/Debug/net8.0/RealTimeButtonDemo.Shared.pdb
+/home/cihat/RealTimeButtonDemo/src/RealTimeButtonDemo.Shared/obj/Debug/net8.0/RealTimeButtonDemo.Shared.GeneratedMSBuildEditorConfig.editorconfig
+/home/cihat/RealTimeButtonDemo/src/RealTimeButtonDemo.Shared/obj/Debug/net8.0/RealTimeButtonDemo.Shared.AssemblyInfoInputs.cache
+/home/cihat/RealTimeButtonDemo/src/RealTimeButtonDemo.Shared/obj/Debug/net8.0/RealTimeButtonDemo.Shared.AssemblyInfo.cs
+/home/cihat/RealTimeButtonDemo/src/RealTimeButtonDemo.Shared/obj/Debug/net8.0/RealTimeButtonDemo.Shared.csproj.CoreCompileInputs.cache
+/home/cihat/RealTimeButtonDemo/src/RealTimeButtonDemo.Shared/obj/Debug/net8.0/RealTimeButtonDemo.Shared.dll
+/home/cihat/RealTimeButtonDemo/src/RealTimeButtonDemo.Shared/obj/Debug/net8.0/refint/RealTimeButtonDemo.Shared.dll
+/home/cihat/RealTimeButtonDemo/src/RealTimeButtonDemo.Shared/obj/Debug/net8.0/RealTimeButtonDemo.Shared.pdb
+/home/cihat/RealTimeButtonDemo/src/RealTimeButtonDemo.Shared/obj/Debug/net8.0/ref/RealTimeButtonDemo.Shared.dll

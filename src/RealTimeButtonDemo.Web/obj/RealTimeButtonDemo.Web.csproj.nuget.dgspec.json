@@ -1,0 +1,168 @@
+{
+  "format": 1,
+  "restore": {
+    "/home/cihat/RealTimeButtonDemo/src/RealTimeButtonDemo.Web/RealTimeButtonDemo.Web.csproj": {}
+  },
+  "projects": {
+    "/home/cihat/RealTimeButtonDemo/src/RealTimeButtonDemo.Shared/RealTimeButtonDemo.Shared.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/cihat/RealTimeButtonDemo/src/RealTimeButtonDemo.Shared/RealTimeButtonDemo.Shared.csproj",
+        "projectName": "RealTimeButtonDemo.Shared",
+        "projectPath": "/home/cihat/RealTimeButtonDemo/src/RealTimeButtonDemo.Shared/RealTimeButtonDemo.Shared.csproj",
+        "packagesPath": "/home/cihat/.nuget/packages/",
+        "outputPath": "/home/cihat/RealTimeButtonDemo/src/RealTimeButtonDemo.Shared/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/cihat/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "/home/cihat/.dotnet/library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/home/cihat/.dotnet/sdk/8.0.411/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/cihat/RealTimeButtonDemo/src/RealTimeButtonDemo.Web/RealTimeButtonDemo.Web.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/cihat/RealTimeButtonDemo/src/RealTimeButtonDemo.Web/RealTimeButtonDemo.Web.csproj",
+        "projectName": "RealTimeButtonDemo.Web",
+        "projectPath": "/home/cihat/RealTimeButtonDemo/src/RealTimeButtonDemo.Web/RealTimeButtonDemo.Web.csproj",
+        "packagesPath": "/home/cihat/.nuget/packages/",
+        "outputPath": "/home/cihat/RealTimeButtonDemo/src/RealTimeButtonDemo.Web/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/cihat/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "/home/cihat/.dotnet/library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "/home/cihat/RealTimeButtonDemo/src/RealTimeButtonDemo.Shared/RealTimeButtonDemo.Shared.csproj": {
+                "projectPath": "/home/cihat/RealTimeButtonDemo/src/RealTimeButtonDemo.Shared/RealTimeButtonDemo.Shared.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Components.WebAssembly": {
+              "target": "Package",
+              "version": "[8.0.17, )"
+            },
+            "Microsoft.AspNetCore.Components.WebAssembly.DevServer": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.17, )"
+            },
+            "Microsoft.AspNetCore.SignalR.Client": {
+              "target": "Package",
+              "version": "[9.0.7, )"
+            },
+            "Microsoft.NET.ILLink.Tasks": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.17, )",
+              "autoReferenced": true
+            },
+            "Microsoft.NET.Sdk.WebAssembly.Pack": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.18, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.NETCore.App.Runtime.Mono.browser-wasm",
+              "version": "[8.0.18, 8.0.18]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/home/cihat/.dotnet/sdk/8.0.411/PortableRuntimeIdentifierGraph.json"
+        }
+      },
+      "runtimes": {
+        "browser-wasm": {
+          "#import": []
+        }
+      }
+    }
+  }
+}

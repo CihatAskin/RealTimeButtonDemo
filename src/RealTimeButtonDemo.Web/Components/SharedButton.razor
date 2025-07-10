@@ -1,0 +1,208 @@
+@using Microsoft.AspNetCore.SignalR.Client
+@using RealTimeButtonDemo.Shared.Models
+@using RealTimeButtonDemo.Shared.DTOs
+@implements IAsyncDisposable
+
+<div class="shared-button-container">
+    <h3>Real-Time Button Demo</h3>
+    
+    @if (!isConnected)
+    {
+        <div class="alert alert-warning">
+            <strong>Disconnected:</strong> Trying to connect to SignalR hub...
+        </div>
+    }
+    else
+    {
+        <div class="alert alert-success">
+            <strong>Connected:</strong> Real-time synchronization active
+        </div>
+    }
+
+    <div class="button-section">
+        <button class="btn btn-lg demo-button" 
+                style="background-color: @currentColor; color: white; min-width: 200px; min-height: 60px;"
+                @onclick="ChangeColor" 
+                disabled="@(!isConnected)">
+            @buttonText
+        </button>
+    </div>
+
+    <div class="info-section mt-3">
+        <p><strong>Room:</strong> @RoomId</p>
+        <p><strong>Last clicked by:</strong> @lastClickedBy</p>
+        <p><strong>Last clicked at:</strong> @lastClickedAt?.ToString("HH:mm:ss")</p>
+    </div>
+
+    <div class="color-palette mt-3">
+        <p><strong>Quick Colors:</strong></p>
+        @foreach (var color in predefinedColors)
+        {
+            <button class="btn btn-sm color-btn me-2 mb-2" 
+                    style="background-color: @color; width: 40px; height: 40px;"
+                    @onclick="() => SetColor(color)"
+                    disabled="@(!isConnected)">
+            </button>
+        }
+    </div>
+</div>
+
+@code {
+    [Parameter] public string RoomId { get; set; } = "demo-room";
+    [Parameter] public string? Token { get; set; }
+
+    private HubConnection? hubConnection;
+    private bool isConnected = false;
+    private string currentColor = "#007bff";
+    private string buttonText = "Click Me!";
+    private string lastClickedBy = "Nobody";
+    private DateTime? lastClickedAt;
+
+    private readonly string[] predefinedColors = {
+        "#007bff", "#dc3545", "#28a745", "#ffc107", 
+        "#17a2b8", "#6f42c1", "#fd7e14", "#e83e8c"
+    };
+
+    protected override async Task OnInitializedAsync()
+    {
+        await InitializeSignalR();
+    }
+
+    private async Task InitializeSignalR()
+    {
+        var hubUrl = "http://localhost:5000/buttonhub";
+        
+        hubConnection = new HubConnectionBuilder()
+            .WithUrl(hubUrl, options =>
+            {
+                if (!string.IsNullOrEmpty(Token))
+                {
+                    options.AccessTokenProvider = () => Task.FromResult(Token)!;
+                }
+            })
+            .WithAutomaticReconnect()
+            .Build();
+
+        hubConnection.On<ButtonState>("ButtonStateChanged", (buttonState) =>
+        {
+            currentColor = buttonState.Color;
+            lastClickedBy = buttonState.LastClickedBy;
+            lastClickedAt = buttonState.LastClickedAt;
+            InvokeAsync(StateHasChanged);
+        });
+
+        hubConnection.On<object>("ButtonClicked", (clickInfo) =>
+        {
+            InvokeAsync(StateHasChanged);
+        });
+
+        hubConnection.Reconnecting += (error) =>
+        {
+            isConnected = false;
+            InvokeAsync(StateHasChanged);
+            return Task.CompletedTask;
+        };
+
+        hubConnection.Reconnected += (connectionId) =>
+        {
+            isConnected = true;
+            InvokeAsync(StateHasChanged);
+            return Task.CompletedTask;
+        };
+
+        hubConnection.Closed += (error) =>
+        {
+            isConnected = false;
+            InvokeAsync(StateHasChanged);
+            return Task.CompletedTask;
+        };
+
+        try
+        {
+            await hubConnection.StartAsync();
+            await hubConnection.SendAsync("JoinRoom", RoomId);
+            isConnected = true;
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"SignalR connection failed: {ex.Message}");
+            isConnected = false;
+        }
+    }
+
+    private async Task ChangeColor()
+    {
+        if (!isConnected || hubConnection == null) return;
+
+        var random = new Random();
+        var newColor = predefinedColors[random.Next(predefinedColors.Length)];
+        
+        await SetColor(newColor);
+        await hubConnection.SendAsync("NotifyButtonClick", RoomId, "current-user");
+    }
+
+    private async Task SetColor(string color)
+    {
+        if (!isConnected || hubConnection == null) return;
+
+        try
+        {
+            await hubConnection.SendAsync("ChangeButtonColor", RoomId, color);
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Failed to change color: {ex.Message}");
+        }
+    }
+
+    public async ValueTask DisposeAsync()
+    {
+        if (hubConnection is not null)
+        {
+            await hubConnection.DisposeAsync();
+        }
+    }
+}
+
+<style>
+    .shared-button-container {
+        text-align: center;
+        padding: 20px;
+    }
+
+    .demo-button {
+        border: 3px solid #fff;
+        border-radius: 10px;
+        font-weight: bold;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .demo-button:hover:not(:disabled) {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+    }
+
+    .demo-button:active {
+        transform: translateY(0);
+    }
+
+    .color-btn {
+        border: 2px solid #fff;
+        border-radius: 50%;
+        transition: transform 0.2s ease;
+    }
+
+    .color-btn:hover:not(:disabled) {
+        transform: scale(1.1);
+        border-color: #000;
+    }
+
+    .info-section {
+        background-color: #f8f9fa;
+        padding: 15px;
+        border-radius: 8px;
+        display: inline-block;
+        text-align: left;
+    }
+</style>

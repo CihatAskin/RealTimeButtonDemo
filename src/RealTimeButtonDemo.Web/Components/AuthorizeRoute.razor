@@ -1,0 +1,51 @@
+@using RealTimeButtonDemo.Web.Services
+@inject AuthenticationService AuthService
+@inject NavigationManager Navigation
+
+@if (isLoading)
+{
+    <div class="d-flex justify-content-center align-items-center" style="min-height: 50vh;">
+        <div class="spinner-border text-primary" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+    </div>
+}
+else if (isAuthenticated)
+{
+    @ChildContent
+}
+else
+{
+    <div class="alert alert-warning text-center">
+        <h4>🔒 Authentication Required</h4>
+        <p>You need to be logged in to access this page.</p>
+        <button class="btn btn-primary" @onclick="GoToLogin">
+            Go to Login
+        </button>
+    </div>
+}
+
+@code {
+    [Parameter] public RenderFragment? ChildContent { get; set; }
+    
+    private bool isLoading = true;
+    private bool isAuthenticated = false;
+
+    protected override async Task OnInitializedAsync()
+    {
+        isAuthenticated = await AuthService.IsAuthenticatedAsync();
+        isLoading = false;
+
+        if (!isAuthenticated)
+        {
+            // Redirect to login after a brief delay to show the message
+            await Task.Delay(100);
+            Navigation.NavigateTo("/login");
+        }
+    }
+
+    private void GoToLogin()
+    {
+        Navigation.NavigateTo("/login");
+    }
+}

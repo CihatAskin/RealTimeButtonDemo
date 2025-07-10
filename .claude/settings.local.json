@@ -1,0 +1,22 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(~/.dotnet/dotnet workload:*)",
+      "Bash(~/.dotnet/dotnet new:*)",
+      "Bash(~/.dotnet/dotnet sln add:*)",
+      "Bash(mv:*)",
+      "Bash(~/.dotnet/dotnet build src/RealTimeButtonDemo.Mobile/RealTimeButtonDemo.Mobile.csproj)",
+      "Bash(rm:*)",
+      "Bash(mkdir:*)",
+      "Bash(~/.dotnet/dotnet ef migrations add InitialCreate --output-dir Data/Migrations)",
+      "Bash(dotnet ef migrations add:*)",
+      "Bash(~/.dotnet/dotnet tool:*)",
+      "Bash(~/.dotnet/dotnet add:*)",
+      "Bash(~/.dotnet/dotnet build:*)",
+      "Bash(~/.dotnet/dotnet run:*)",
+      "Bash(curl:*)",
+      "Bash(pkill:*)"
+    ],
+    "deny": []
+  }
+}
