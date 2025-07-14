@@ -1,6 +1,7 @@
 @using Microsoft.AspNetCore.SignalR.Client
 @using RealTimeButtonDemo.Shared.Models
 @using RealTimeButtonDemo.Shared.DTOs
+@using RealTimeButtonDemo.Shared.Constants
 @implements IAsyncDisposable
 
 <div class="shared-button-container">
@@ -71,8 +72,8 @@
 
     private async Task InitializeSignalR()
     {
-        var baseUrl = ApiBaseUrl ?? "http://localhost:5000";
-        var hubUrl = $"{baseUrl}/buttonhub";
+        var baseUrl = ApiBaseUrl ?? ApiConstants.DefaultBaseUrl;
+        var hubUrl = ApiConstants.GetHubUrl(baseUrl);
         
         hubConnection = new HubConnectionBuilder()
             .WithUrl(hubUrl, options =>
