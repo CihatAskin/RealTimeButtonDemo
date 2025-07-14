@@ -1,5 +1,160 @@
 ﻿@page "/"
+@using RealTimeButtonDemo.Mobile.Services
+@inject MauiAuthenticationService AuthService
+@inject NavigationManager Navigation
 
-<h1>Hello, world!</h1>
+<div class="home-container">
+    <div class="welcome-card">
+        <h1>Real-Time Button Demo</h1>
+        <h2>MAUI Blazor Hybrid</h2>
+        <p>A cross-platform mobile demo app showcasing real-time button synchronization.</p>
+        
+        <div class="action-buttons">
+            <button class="btn btn-primary btn-lg" @onclick="NavigateToApp">
+                Get Started
+            </button>
+        </div>
+        
+        <div class="features">
+            <h3>Features:</h3>
+            <ul>
+                <li>🔄 Real-time synchronization with SignalR</li>
+                <li>🔐 Secure authentication with JWT</li>
+                <li>📱 Cross-platform mobile support</li>
+                <li>🎨 Interactive color changing</li>
+            </ul>
+        </div>
+    </div>
+</div>
 
-Welcome to your new app.
+@code {
+    protected override async Task OnInitializedAsync()
+    {
+        // Check if user is already authenticated
+        if (await AuthService.IsAuthenticatedAsync())
+        {
+            Navigation.NavigateTo("/dashboard");
+        }
+    }
+
+    private async Task NavigateToApp()
+    {
+        if (await AuthService.IsAuthenticatedAsync())
+        {
+            Navigation.NavigateTo("/dashboard");
+        }
+        else
+        {
+            Navigation.NavigateTo("/login");
+        }
+    }
+}
+
+<style>
+    .home-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        padding: 20px;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    }
+
+    .welcome-card {
+        background: white;
+        padding: 40px;
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        text-align: center;
+        max-width: 500px;
+        width: 100%;
+    }
+
+    .welcome-card h1 {
+        margin: 0 0 10px 0;
+        color: #333;
+        font-size: 2.5rem;
+    }
+
+    .welcome-card h2 {
+        margin: 0 0 20px 0;
+        color: #666;
+        font-size: 1.5rem;
+        font-weight: 300;
+    }
+
+    .welcome-card p {
+        margin: 0 0 30px 0;
+        color: #777;
+        font-size: 1.1rem;
+        line-height: 1.5;
+    }
+
+    .action-buttons {
+        margin-bottom: 30px;
+    }
+
+    .btn {
+        display: inline-block;
+        padding: 12px 30px;
+        font-size: 16px;
+        border: none;
+        border-radius: 25px;
+        cursor: pointer;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        font-weight: 500;
+    }
+
+    .btn-primary {
+        background: linear-gradient(45deg, #667eea, #764ba2);
+        color: white;
+    }
+
+    .btn-primary:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .btn-lg {
+        padding: 15px 40px;
+        font-size: 18px;
+    }
+
+    .features {
+        text-align: left;
+        margin-top: 30px;
+    }
+
+    .features h3 {
+        margin: 0 0 15px 0;
+        color: #333;
+        text-align: center;
+    }
+
+    .features ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .features li {
+        padding: 8px 0;
+        color: #666;
+        font-size: 14px;
+    }
+
+    @media (max-width: 600px) {
+        .welcome-card {
+            padding: 30px 20px;
+        }
+        
+        .welcome-card h1 {
+            font-size: 2rem;
+        }
+        
+        .welcome-card h2 {
+            font-size: 1.2rem;
+        }
+    }
+</style>

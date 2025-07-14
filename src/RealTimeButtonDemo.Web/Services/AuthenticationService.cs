@@ -5,7 +5,7 @@ namespace RealTimeButtonDemo.Web.Services;
 public class AuthenticationService
 {
     private readonly IJSRuntime _jsRuntime;
-    
+
     public AuthenticationService(IJSRuntime jsRuntime)
     {
         _jsRuntime = jsRuntime;

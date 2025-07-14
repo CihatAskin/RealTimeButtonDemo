@@ -1,4 +1,5 @@
 ﻿using Microsoft.Extensions.Logging;
+using RealTimeButtonDemo.Mobile.Services;
 
 namespace RealTimeButtonDemo.Mobile;
 
@@ -15,6 +16,12 @@ public static class MauiProgram
 			});
 
 		builder.Services.AddMauiBlazorWebView();
+
+		// Register HTTP client for API calls
+		builder.Services.AddHttpClient();
+
+		// Register authentication service
+		builder.Services.AddSingleton<MauiAuthenticationService>();
 
 #if DEBUG
 		builder.Services.AddBlazorWebViewDeveloperTools();
