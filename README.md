@@ -135,14 +135,16 @@ You need to run both the API and Web projects simultaneously:
 cd src/RealTimeButtonDemo.API
 dotnet run
 ```
-The API will be available at: `https://localhost:5001`
+The API will be available at a dynamic port (e.g., `http://localhost:5293`)
 
 #### Terminal 2 - Web Client
 ```bash
 cd src/RealTimeButtonDemo.Web
 dotnet run
 ```
-The Web application will be available at: `https://localhost:5002`
+The Web application will be available at a dynamic port (e.g., `http://localhost:5188`)
+
+**Important:** After starting both applications, note the actual port numbers displayed in your terminal. If the Web client shows connection errors, ensure the API URLs in the code match the running API port.
 
 ### Running Mobile App
 
@@ -193,8 +195,10 @@ This project uses hardcoded credentials for educational purposes:
 ## API Endpoints
 
 - **Authentication:** `POST /api/auth/login`
-- **SignalR Hub:** `https://localhost:5001/buttonhub`
-- **Swagger UI:** `https://localhost:5001/swagger`
+- **SignalR Hub:** `/buttonhub` (dynamically built from base URL)
+- **Swagger UI:** `/swagger` (available at your API base URL)
+
+**Note:** Actual URLs depend on your runtime environment. Check the terminal output for exact URLs when running the applications.
 
 ## Platform-Specific Notes
 
@@ -248,8 +252,40 @@ RealTimeButtonDemo/
 ```
 
 ### Ports
-- **API Server:** `https://localhost:5001`
-- **Web Client:** `https://localhost:5002`
+- **API Server:** `https://localhost:5001` (or dynamic port like `http://localhost:5293`)
+- **Web Client:** `https://localhost:5002` (or dynamic port like `http://localhost:5188`)
+
+**Note:** Port numbers may vary depending on your environment. Always check the actual ports displayed in your terminal when running the applications.
+
+### URL Configuration Management
+
+The application now uses centralized URL configuration through the `ApiConstants` class:
+
+```csharp
+// Located in: src/RealTimeButtonDemo.Shared/Constants/ApiConstants.cs
+public static class ApiConstants
+{
+    public const string DefaultBaseUrl = "http://localhost:5293";
+    public const string DefaultHubUrl = "http://localhost:5293/buttonhub";
+    
+    // Auth endpoints
+    public const string AuthLoginEndpoint = "/api/auth/login";
+    
+    // Button endpoints  
+    public const string ButtonStateEndpoint = "/api/button/state";
+    
+    // SignalR Hub path
+    public const string HubPath = "/buttonhub";
+    
+    // Build hub URL from base URL
+    public static string GetHubUrl(string baseUrl) => $"{baseUrl.TrimEnd('/')}{HubPath}";
+}
+```
+
+To update API URLs for different environments:
+1. Modify `ApiConstants.DefaultBaseUrl` in the Shared project
+2. Rebuild the solution
+3. All projects will automatically use the new URLs
 
 ## Troubleshooting
 
@@ -262,25 +298,30 @@ RealTimeButtonDemo/
 
 2. **Port Already in Use:**
    ```bash
-   # Kill process using port 5001
-   netstat -ano | findstr :5001
+   # Kill process using specific port (replace 5293 with your actual port)
+   netstat -ano | findstr :5293
    taskkill /PID <PID> /F
    ```
 
-3. **Database Connection Issues:**
+3. **API Connection Errors (ERR_CONNECTION_REFUSED):**
+   - Check if API server is running on the correct port
+   - Verify the API URL in `ApiConstants.DefaultBaseUrl` matches the running API port
+   - Ensure both HTTP/HTTPS protocols match between client and server
+
+4. **Database Connection Issues:**
    ```bash
    # Reset database
    dotnet ef database drop --force
    dotnet ef database update
    ```
 
-4. **MAUI Workload Issues:**
+5. **MAUI Workload Issues:**
    ```bash
    dotnet workload update
    dotnet workload repair
    ```
 
-5. **SQLite Connection Issues:**
+6. **SQLite Connection Issues:**
    ```bash
    # Error: Format of the initialization string does not conform to specification
    # Solution: Add "Data Source=" prefix to connection string
@@ -292,7 +333,7 @@ RealTimeButtonDemo/
    dotnet ef database update
    ```
 
-6. **Entity Framework Migration Issues:**
+7. **Entity Framework Migration Issues:**
    ```bash
    # Error: PendingModelChangesWarning
    # Solution: Remove and recreate migrations
@@ -301,7 +342,7 @@ RealTimeButtonDemo/
    dotnet ef database update
    ```
 
-7. **Path Issues (Windows vs Linux):**
+8. **Path Issues (Windows vs Linux):**
    ```bash
    # Windows path format
    "Data Source=..\\..\\database\\realtimebutton.db"

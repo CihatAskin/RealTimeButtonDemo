@@ -1,5 +1,6 @@
 @page "/dashboard"
 @using RealTimeButtonDemo.Shared.Components
+@using RealTimeButtonDemo.Shared.Constants
 @using RealTimeButtonDemo.Web.Services
 @using RealTimeButtonDemo.Web.Components
 @inject AuthenticationService AuthService
@@ -23,7 +24,7 @@
             <div class="col-md-8 offset-md-2">
                 <div class="card">
                     <div class="card-body">
-                        <SharedButton RoomId="demo-room" Token="@token" ApiBaseUrl="http://localhost:5293" />
+                        <SharedButton RoomId="demo-room" Token="@token" ApiBaseUrl="@ApiConstants.DefaultBaseUrl" />
                     </div>
                 </div>
             </div>
