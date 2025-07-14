@@ -41,7 +41,7 @@
         {
             <button class="btn btn-sm color-btn me-2 mb-2" 
                     style="background-color: @color; width: 40px; height: 40px;"
-                    @onclick="() => SetColor(color)"
+                    @onclick="@(async () => await SetColor(color))"
                     disabled="@(!isConnected)">
             </button>
         }
