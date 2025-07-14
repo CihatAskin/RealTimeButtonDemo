@@ -24,7 +24,16 @@
             <div class="col-md-8 offset-md-2">
                 <div class="card">
                     <div class="card-body">
-                        <SharedButton RoomId="demo-room" Token="@token" ApiBaseUrl="@ApiConstants.DefaultBaseUrl" />
+                        @if (string.IsNullOrEmpty(token))
+                        {
+                            <div class="alert alert-info">
+                                <strong>Loading...</strong> Authenticating user...
+                            </div>
+                        }
+                        else
+                        {
+                            <SharedButton RoomId="demo-room" Token="@token" ApiBaseUrl="@ApiConstants.DefaultBaseUrl" />
+                        }
                     </div>
                 </div>
             </div>

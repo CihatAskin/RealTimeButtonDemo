@@ -1,4 +1,5 @@
 @using Microsoft.AspNetCore.SignalR.Client
+@using Microsoft.AspNetCore.Components.Web
 @using RealTimeButtonDemo.Shared.Models
 @using RealTimeButtonDemo.Shared.DTOs
 @using RealTimeButtonDemo.Shared.Constants
@@ -23,7 +24,7 @@
     <div class="button-section">
         <button class="btn btn-lg demo-button" 
                 style="background-color: @currentColor; color: white; min-width: 200px; min-height: 60px;"
-                @onclick="ChangeColor" 
+                onclick="@OnMainButtonClick" 
                 disabled="@(!isConnected)">
             @buttonText
         </button>
@@ -37,11 +38,13 @@
 
     <div class="color-palette mt-3">
         <p><strong>Quick Colors:</strong></p>
-        @foreach (var color in predefinedColors)
+        @for (int i = 0; i < predefinedColors.Length; i++)
         {
+            var colorIndex = i;
+            var color = predefinedColors[colorIndex];
             <button class="btn btn-sm color-btn me-2 mb-2" 
                     style="background-color: @color; width: 40px; height: 40px;"
-                    @onclick="@(async () => await SetColor(color))"
+                    onclick="@(() => OnColorButtonClick(color))"
                     disabled="@(!isConnected)">
             </button>
         }
@@ -133,7 +136,7 @@
         }
     }
 
-    private async Task ChangeColor()
+    private async Task OnMainButtonClick()
     {
         if (!isConnected || hubConnection == null) return;
 
@@ -142,6 +145,12 @@
         
         await SetColor(newColor);
         await hubConnection.SendAsync("NotifyButtonClick", RoomId, "current-user");
+    }
+
+    private async Task OnColorButtonClick(string color)
+    {
+        if (!isConnected || hubConnection == null) return;
+        await SetColor(color);
     }
 
     private async Task SetColor(string color)
