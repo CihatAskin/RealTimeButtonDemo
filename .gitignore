@@ -37,3 +37,6 @@
   ## OS
   .DS_Store
   Thumbs.db
+
+## Build artifacts that cause conflicts
+*.sourcelink.json
