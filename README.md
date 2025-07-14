@@ -96,6 +96,34 @@ dotnet ef database update
 dotnet build
 ```
 
+## Windows Specific Setup
+
+### Database Connection String
+On Windows, you may need to update the connection string in `src/RealTimeButtonDemo.API/appsettings.Development.json`:
+
+```json
+{
+  "ConnectionStrings": {
+    "DefaultConnection": "Data Source=..\\..\\database\\realtimebutton.db"
+  }
+}
+```
+
+**Important:** Always include `Data Source=` prefix for SQLite connections.
+
+### PowerShell Commands
+Use PowerShell for all commands on Windows:
+```powershell
+# Create database directory
+mkdir database -Force
+
+# Run migrations
+dotnet ef database update
+
+# Run projects
+dotnet run
+```
+
 ## Running the Application
 
 ### Development Mode
@@ -144,21 +172,48 @@ cd src/RealTimeButtonDemo.Mobile
 dotnet build -f net8.0-windows10.0.19041.0
 ```
 
-## Authentication
+## Development Credentials & Security
 
-The application uses simple hardcoded authentication for demo purposes:
+**⚠️ Educational Project - Not for Production Use**
 
-**Default Credentials:**
-- **Username:** `admin`
-- **Password:** `admin123`
+This project uses hardcoded credentials for educational purposes:
 
-Other allowed usernames: `demo`, `test` (same password)
+### Default Login Credentials:
+- **Username:** `admin` | **Password:** `admin123`
+- **Username:** `demo` | **Password:** `admin123`  
+- **Username:** `test` | **Password:** `admin123`
+
+### JWT Secret Key:
+```json
+"SecretKey": "RealTimeButtonDemo_SuperSecretKey_ForDevelopmentOnly_2024!"
+```
+
+**Note:** These credentials are intentionally exposed for learning purposes. Never use hardcoded credentials in production applications.
 
 ## API Endpoints
 
 - **Authentication:** `POST /api/auth/login`
 - **SignalR Hub:** `https://localhost:5001/buttonhub`
 - **Swagger UI:** `https://localhost:5001/swagger`
+
+## Platform-Specific Notes
+
+### Windows Users:
+- Use **PowerShell** for all commands
+- Connection string uses `\\` for path separators
+- Ensure **Visual Studio 2022** with .NET MAUI workload is installed
+- Database path: `..\\..\\database\\realtimebutton.db`
+
+### Linux/macOS Users:
+- Connection string uses `/` for path separators  
+- Update paths in `appsettings.Development.json` accordingly
+- For iOS development, **macOS with Xcode** is required
+- Database path: `../../database/realtimebutton.db`
+
+### Cross-Platform Development:
+- All source code is platform-independent
+- Only configuration files need path adjustments
+- MAUI project targets all major platforms
 
 ## Project Structure
 
@@ -223,6 +278,36 @@ RealTimeButtonDemo/
    ```bash
    dotnet workload update
    dotnet workload repair
+   ```
+
+5. **SQLite Connection Issues:**
+   ```bash
+   # Error: Format of the initialization string does not conform to specification
+   # Solution: Add "Data Source=" prefix to connection string
+   "DefaultConnection": "Data Source=..\\..\\database\\realtimebutton.db"
+
+   # Error: unable to open database file  
+   # Solution: Create database directory and check path
+   mkdir database
+   dotnet ef database update
+   ```
+
+6. **Entity Framework Migration Issues:**
+   ```bash
+   # Error: PendingModelChangesWarning
+   # Solution: Remove and recreate migrations
+   dotnet ef migrations remove --force
+   dotnet ef migrations add InitialCreate
+   dotnet ef database update
+   ```
+
+7. **Path Issues (Windows vs Linux):**
+   ```bash
+   # Windows path format
+   "Data Source=..\\..\\database\\realtimebutton.db"
+
+   # Linux/macOS path format  
+   "Data Source=../../database/realtimebutton.db"
    ```
 
 ### Development Tips
