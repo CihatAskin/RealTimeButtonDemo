@@ -1,0 +1,49 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\cihat\\source\\repos\\CihatAskin\\RealTimeButtonDemo\\src\\RealTimeButtonDemo.Mobile\\obj\\Debug\\net8.0-android\\scopedcss\\bundle\\RealTimeButtonDemo.Mobile.styles.css",
+      "PackagePath": "staticwebassets\\RealTimeButtonDemo.Mobile.styles.css"
+    },
+    {
+      "Id": "C:\\Users\\cihat\\source\\repos\\CihatAskin\\RealTimeButtonDemo\\src\\RealTimeButtonDemo.Mobile\\wwwroot\\css\\app.css",
+      "PackagePath": "staticwebassets\\css\\app.css"
+    },
+    {
+      "Id": "C:\\Users\\cihat\\source\\repos\\CihatAskin\\RealTimeButtonDemo\\src\\RealTimeButtonDemo.Mobile\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\cihat\\source\\repos\\CihatAskin\\RealTimeButtonDemo\\src\\RealTimeButtonDemo.Mobile\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\cihat\\source\\repos\\CihatAskin\\RealTimeButtonDemo\\src\\RealTimeButtonDemo.Mobile\\wwwroot\\favicon.png",
+      "PackagePath": "staticwebassets\\favicon.png"
+    },
+    {
+      "Id": "C:\\Users\\cihat\\source\\repos\\CihatAskin\\RealTimeButtonDemo\\src\\RealTimeButtonDemo.Mobile\\wwwroot\\index.html",
+      "PackagePath": "staticwebassets\\index.html"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0-android\\staticwebassets\\msbuild.RealTimeButtonDemo.Mobile.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0-android\\staticwebassets\\msbuild.RealTimeButtonDemo.Mobile.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0-android\\staticwebassets\\msbuild.build.RealTimeButtonDemo.Mobile.props",
+      "PackagePath": "build\\RealTimeButtonDemo.Mobile.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0-android\\staticwebassets\\msbuild.buildMultiTargeting.RealTimeButtonDemo.Mobile.props",
+      "PackagePath": "buildMultiTargeting\\RealTimeButtonDemo.Mobile.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0-android\\staticwebassets\\msbuild.buildTransitive.RealTimeButtonDemo.Mobile.props",
+      "PackagePath": "buildTransitive\\RealTimeButtonDemo.Mobile.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

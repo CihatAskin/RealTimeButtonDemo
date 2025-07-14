@@ -1,12 +1,12 @@
 {
   "mainAssemblyName": "RealTimeButtonDemo.Web",
   "resources": {
-    "hash": "sha256-sHZZYPVcI3LuhRTT7Hb9K4n+aLMHes6zkuTDKj/KOjw=",
+    "hash": "sha256-8Y2XWlOyIZTGP2Ek+/x4pLRaLmMLnTItFoIN2FBhyGs=",
     "jsModuleNative": {
-      "dotnet.native.8.0.18.zxz2cmtrda.js": "sha256-1QpKPnxEuRCElzcp+e3MrovJeAJkuzqKmRQay/6Aa08="
+      "dotnet.native.js": "sha256-1QpKPnxEuRCElzcp+e3MrovJeAJkuzqKmRQay/6Aa08="
     },
     "jsModuleRuntime": {
-      "dotnet.runtime.8.0.18.not2mwajr2.js": "sha256-QVLJL2PFoMyGwMOZIRShe4/0TJQfK2WMqoIYdVaI+yM="
+      "dotnet.runtime.js": "sha256-QVLJL2PFoMyGwMOZIRShe4/0TJQfK2WMqoIYdVaI+yM="
     },
     "wasmNative": {
       "dotnet.native.wasm": "sha256-0icL1rktur02b0t8WzUUQh+w3sa0rLR7YIla31PAEHM="
@@ -16,6 +16,7 @@
       "icudt_EFIGS.dat": "sha256-8fItetYY8kQ0ww6oxwTLiT3oXlBwHKumbeP2pRF4yTc=",
       "icudt_no_CJK.dat": "sha256-L7sV7NEYP37/Qr2FPCePo5cJqRgTXRwGHuwF5Q+0Nfs="
     },
+    "coreAssembly": {},
     "assembly": {
       "Microsoft.AspNetCore.Authorization.wasm": "sha256-5a7/RdhGgJYmku/9sroYrsn1T46a5Hi/fIg49VoQnJQ=",
       "Microsoft.AspNetCore.Components.wasm": "sha256-RXNLtwbclPPqHjZ5WE/aBFbGFbrMv8bsCzF5YnPCujo=",
@@ -219,12 +220,12 @@
       "mscorlib.wasm": "sha256-UnQd0YPXNpwbXsKqO8RAqgUVuwZsSpprfAIPpdV/y1Q=",
       "netstandard.wasm": "sha256-/QbD8JDZyYwfyk89W3qJL3HTAINDCVziZIySHIZcDhw=",
       "System.Private.CoreLib.wasm": "sha256-oBqNgH7R24FqGbaL3XnfQDqn3rk28jERFosgAryKT6U=",
-      "RealTimeButtonDemo.Shared.wasm": "sha256-x6nQmRrUG7c7JQDtIMpDimwnU62gJsJ2lu6TrZTiNao=",
-      "RealTimeButtonDemo.Web.wasm": "sha256-fzOLXR7m7gqRB/Z2iBYk43fReBkwBaqFbPneZpgyVgU="
+      "RealTimeButtonDemo.Shared.wasm": "sha256-j2nTGLADVHRRKA/cvOxAVjfxoJvE4yi1fm83P5O5HGc=",
+      "RealTimeButtonDemo.Web.wasm": "sha256-+OQBs+ZjNGDQRCsdSW78FliYcODbZ9F6ZOVBj7B0Yzo="
     },
     "pdb": {
-      "RealTimeButtonDemo.Shared.pdb": "sha256-GqeL/lpU5IY7/brY8YpBg1L32MaTfqETbq1660Q1Q00=",
-      "RealTimeButtonDemo.Web.pdb": "sha256-hlUrJFZRy/VE0+vEDYAV23af1/w6qQiU73n7s/WF10E="
+      "RealTimeButtonDemo.Shared.pdb": "sha256-pJH/vTQyyDeDxgs1iYK0Ehn2ZQZdMSCWfLtbknwSmCE=",
+      "RealTimeButtonDemo.Web.pdb": "sha256-r6xhSBphOPr6RE8TmIm9OPK3Vs24tEIz0s4bcqN/FJE="
     }
   },
   "cacheBootResources": true,

@@ -1,0 +1,54 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\cihat\\source\\repos\\CihatAskin\\RealTimeButtonDemo\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{10D5EF36-3DF5-4DC5-AC42-BC5E5F861893}|src\\RealTimeButtonDemo.API\\RealTimeButtonDemo.API.csproj|c:\\users\\cihat\\source\\repos\\cihataskin\\realtimebuttondemo\\src\\realtimebuttondemo.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{10D5EF36-3DF5-4DC5-AC42-BC5E5F861893}|src\\RealTimeButtonDemo.API\\RealTimeButtonDemo.API.csproj|solutionrelative:src\\realtimebuttondemo.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95D19D11-A6DF-4063-8D07-4A95665A3056}|src\\RealTimeButtonDemo.Shared\\RealTimeButtonDemo.Shared.csproj|c:\\users\\cihat\\source\\repos\\cihataskin\\realtimebuttondemo\\src\\realtimebuttondemo.shared\\realtimebuttondemo.shared.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{95D19D11-A6DF-4063-8D07-4A95665A3056}|src\\RealTimeButtonDemo.Shared\\RealTimeButtonDemo.Shared.csproj|solutionrelative:src\\realtimebuttondemo.shared\\realtimebuttondemo.shared.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\cihat\\source\\repos\\CihatAskin\\RealTimeButtonDemo\\src\\RealTimeButtonDemo.API\\Program.cs",
+              "RelativeDocumentMoniker": "src\\RealTimeButtonDemo.API\\Program.cs",
+              "ToolTip": "C:\\Users\\cihat\\source\\repos\\CihatAskin\\RealTimeButtonDemo\\src\\RealTimeButtonDemo.API\\Program.cs",
+              "RelativeToolTip": "src\\RealTimeButtonDemo.API\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGMAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-14T11:37:29.418Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "RealTimeButtonDemo.Shared",
+              "DocumentMoniker": "C:\\Users\\cihat\\source\\repos\\CihatAskin\\RealTimeButtonDemo\\src\\RealTimeButtonDemo.Shared\\RealTimeButtonDemo.Shared.csproj",
+              "RelativeDocumentMoniker": "src\\RealTimeButtonDemo.Shared\\RealTimeButtonDemo.Shared.csproj",
+              "ToolTip": "C:\\Users\\cihat\\source\\repos\\CihatAskin\\RealTimeButtonDemo\\src\\RealTimeButtonDemo.Shared\\RealTimeButtonDemo.Shared.csproj",
+              "RelativeToolTip": "src\\RealTimeButtonDemo.Shared\\RealTimeButtonDemo.Shared.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-07-14T11:06:14.311Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

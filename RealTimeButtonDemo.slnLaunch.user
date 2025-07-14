@@ -1,0 +1,15 @@
+[
+  {
+    "Name": "New Profile",
+    "Projects": [
+      {
+        "Path": "src\\RealTimeButtonDemo.API\\RealTimeButtonDemo.API.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "src\\RealTimeButtonDemo.Web\\RealTimeButtonDemo.Web.csproj",
+        "Action": "Start"
+      }
+    ]
+  }
+]

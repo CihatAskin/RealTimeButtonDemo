@@ -1,34 +1,40 @@
 {
   "format": 1,
   "restore": {
-    "/home/cihat/RealTimeButtonDemo/src/RealTimeButtonDemo.API/RealTimeButtonDemo.API.csproj": {}
+    "C:\\Users\\cihat\\source\\repos\\CihatAskin\\RealTimeButtonDemo\\src\\RealTimeButtonDemo.API\\RealTimeButtonDemo.API.csproj": {}
   },
   "projects": {
-    "/home/cihat/RealTimeButtonDemo/src/RealTimeButtonDemo.API/RealTimeButtonDemo.API.csproj": {
+    "C:\\Users\\cihat\\source\\repos\\CihatAskin\\RealTimeButtonDemo\\src\\RealTimeButtonDemo.API\\RealTimeButtonDemo.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/cihat/RealTimeButtonDemo/src/RealTimeButtonDemo.API/RealTimeButtonDemo.API.csproj",
+        "projectUniqueName": "C:\\Users\\cihat\\source\\repos\\CihatAskin\\RealTimeButtonDemo\\src\\RealTimeButtonDemo.API\\RealTimeButtonDemo.API.csproj",
         "projectName": "RealTimeButtonDemo.API",
-        "projectPath": "/home/cihat/RealTimeButtonDemo/src/RealTimeButtonDemo.API/RealTimeButtonDemo.API.csproj",
-        "packagesPath": "/home/cihat/.nuget/packages/",
-        "outputPath": "/home/cihat/RealTimeButtonDemo/src/RealTimeButtonDemo.API/obj/",
+        "projectPath": "C:\\Users\\cihat\\source\\repos\\CihatAskin\\RealTimeButtonDemo\\src\\RealTimeButtonDemo.API\\RealTimeButtonDemo.API.csproj",
+        "packagesPath": "C:\\Users\\cihat\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\cihat\\source\\repos\\CihatAskin\\RealTimeButtonDemo\\src\\RealTimeButtonDemo.API\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "/home/cihat/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\cihat\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
-          "/home/cihat/.dotnet/library-packs": {},
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "/home/cihat/RealTimeButtonDemo/src/RealTimeButtonDemo.Shared/RealTimeButtonDemo.Shared.csproj": {
-                "projectPath": "/home/cihat/RealTimeButtonDemo/src/RealTimeButtonDemo.Shared/RealTimeButtonDemo.Shared.csproj"
+              "C:\\Users\\cihat\\source\\repos\\CihatAskin\\RealTimeButtonDemo\\src\\RealTimeButtonDemo.Shared\\RealTimeButtonDemo.Shared.csproj": {
+                "projectPath": "C:\\Users\\cihat\\source\\repos\\CihatAskin\\RealTimeButtonDemo\\src\\RealTimeButtonDemo.Shared\\RealTimeButtonDemo.Shared.csproj"
               }
             }
           }
@@ -42,7 +48,8 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        }
+        },
+        "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
         "net8.0": {
@@ -94,27 +101,33 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/home/cihat/.dotnet/sdk/8.0.411/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.302/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "/home/cihat/RealTimeButtonDemo/src/RealTimeButtonDemo.Shared/RealTimeButtonDemo.Shared.csproj": {
+    "C:\\Users\\cihat\\source\\repos\\CihatAskin\\RealTimeButtonDemo\\src\\RealTimeButtonDemo.Shared\\RealTimeButtonDemo.Shared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/cihat/RealTimeButtonDemo/src/RealTimeButtonDemo.Shared/RealTimeButtonDemo.Shared.csproj",
+        "projectUniqueName": "C:\\Users\\cihat\\source\\repos\\CihatAskin\\RealTimeButtonDemo\\src\\RealTimeButtonDemo.Shared\\RealTimeButtonDemo.Shared.csproj",
         "projectName": "RealTimeButtonDemo.Shared",
-        "projectPath": "/home/cihat/RealTimeButtonDemo/src/RealTimeButtonDemo.Shared/RealTimeButtonDemo.Shared.csproj",
-        "packagesPath": "/home/cihat/.nuget/packages/",
-        "outputPath": "/home/cihat/RealTimeButtonDemo/src/RealTimeButtonDemo.Shared/obj/",
+        "projectPath": "C:\\Users\\cihat\\source\\repos\\CihatAskin\\RealTimeButtonDemo\\src\\RealTimeButtonDemo.Shared\\RealTimeButtonDemo.Shared.csproj",
+        "packagesPath": "C:\\Users\\cihat\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\cihat\\source\\repos\\CihatAskin\\RealTimeButtonDemo\\src\\RealTimeButtonDemo.Shared\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "/home/cihat/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\cihat\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
-          "/home/cihat/.dotnet/library-packs": {},
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -132,7 +145,8 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        }
+        },
+        "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
         "net8.0": {
@@ -163,7 +177,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/home/cihat/.dotnet/sdk/8.0.411/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.302/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

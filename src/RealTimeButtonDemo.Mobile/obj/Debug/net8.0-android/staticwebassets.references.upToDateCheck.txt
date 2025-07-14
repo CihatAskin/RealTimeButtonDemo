@@ -1,0 +1,2 @@
+C:\Users\cihat\source\repos\CihatAskin\RealTimeButtonDemo\src\RealTimeButtonDemo.Shared\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\cihat\source\repos\CihatAskin\RealTimeButtonDemo\src\RealTimeButtonDemo.Shared\obj\Debug\net8.0\staticwebassets.build.json
