@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "RealTimeButtonDemo.Web",
   "resources": {
-    "hash": "sha256-zb8uZtetRX0UBnHAFFpPDlZzZjRdICdCASlcnx2IHQ4=",
+    "hash": "sha256-sHZZYPVcI3LuhRTT7Hb9K4n+aLMHes6zkuTDKj/KOjw=",
     "jsModuleNative": {
       "dotnet.native.8.0.18.zxz2cmtrda.js": "sha256-1QpKPnxEuRCElzcp+e3MrovJeAJkuzqKmRQay/6Aa08="
     },
@@ -219,12 +219,12 @@
       "mscorlib.wasm": "sha256-UnQd0YPXNpwbXsKqO8RAqgUVuwZsSpprfAIPpdV/y1Q=",
       "netstandard.wasm": "sha256-/QbD8JDZyYwfyk89W3qJL3HTAINDCVziZIySHIZcDhw=",
       "System.Private.CoreLib.wasm": "sha256-oBqNgH7R24FqGbaL3XnfQDqn3rk28jERFosgAryKT6U=",
-      "RealTimeButtonDemo.Shared.wasm": "sha256-PusjJd6taHGTpAdSpPHCq7Gx6bGX1xAGoMlcoUKf00k=",
-      "RealTimeButtonDemo.Web.wasm": "sha256-v8kQY4osumCBmnOAWn1y7retob8b0GbNreM0lqQVgPo="
+      "RealTimeButtonDemo.Shared.wasm": "sha256-x6nQmRrUG7c7JQDtIMpDimwnU62gJsJ2lu6TrZTiNao=",
+      "RealTimeButtonDemo.Web.wasm": "sha256-fzOLXR7m7gqRB/Z2iBYk43fReBkwBaqFbPneZpgyVgU="
     },
     "pdb": {
-      "RealTimeButtonDemo.Shared.pdb": "sha256-en1r7YnADaQf/sY7x5yRdRXb7q/DCPmJj6P+8KRldLA=",
-      "RealTimeButtonDemo.Web.pdb": "sha256-RB+btdbJksn0hIeBRzPLxqpJy5xs5Te7ixxMdNt4qpg="
+      "RealTimeButtonDemo.Shared.pdb": "sha256-GqeL/lpU5IY7/brY8YpBg1L32MaTfqETbq1660Q1Q00=",
+      "RealTimeButtonDemo.Web.pdb": "sha256-hlUrJFZRy/VE0+vEDYAV23af1/w6qQiU73n7s/WF10E="
     }
   },
   "cacheBootResources": true,

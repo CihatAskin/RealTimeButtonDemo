@@ -172,3 +172,7 @@
 /home/cihat/RealTimeButtonDemo/src/RealTimeButtonDemo.API/obj/Debug/net8.0/RealTimeButtonDemo.API.pdb
 /home/cihat/RealTimeButtonDemo/src/RealTimeButtonDemo.API/obj/Debug/net8.0/RealTimeButtonDemo.API.genruntimeconfig.cache
 /home/cihat/RealTimeButtonDemo/src/RealTimeButtonDemo.API/obj/Debug/net8.0/ref/RealTimeButtonDemo.API.dll
+/home/cihat/RealTimeButtonDemo/src/RealTimeButtonDemo.API/bin/Debug/net8.0/Microsoft.AspNetCore.Http.Connections.Client.dll
+/home/cihat/RealTimeButtonDemo/src/RealTimeButtonDemo.API/bin/Debug/net8.0/Microsoft.AspNetCore.SignalR.Client.dll
+/home/cihat/RealTimeButtonDemo/src/RealTimeButtonDemo.API/bin/Debug/net8.0/Microsoft.AspNetCore.SignalR.Client.Core.dll
+/home/cihat/RealTimeButtonDemo/src/RealTimeButtonDemo.API/obj/Debug/net8.0/RealTimeButtonDemo.API.sourcelink.json

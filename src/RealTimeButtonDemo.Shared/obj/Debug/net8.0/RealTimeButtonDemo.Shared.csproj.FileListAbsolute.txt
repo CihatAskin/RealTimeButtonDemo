@@ -9,3 +9,13 @@
 /home/cihat/RealTimeButtonDemo/src/RealTimeButtonDemo.Shared/obj/Debug/net8.0/refint/RealTimeButtonDemo.Shared.dll
 /home/cihat/RealTimeButtonDemo/src/RealTimeButtonDemo.Shared/obj/Debug/net8.0/RealTimeButtonDemo.Shared.pdb
 /home/cihat/RealTimeButtonDemo/src/RealTimeButtonDemo.Shared/obj/Debug/net8.0/ref/RealTimeButtonDemo.Shared.dll
+/home/cihat/RealTimeButtonDemo/src/RealTimeButtonDemo.Shared/obj/Debug/net8.0/RealTimeButtonDemo.Shared.csproj.AssemblyReference.cache
+/home/cihat/RealTimeButtonDemo/src/RealTimeButtonDemo.Shared/obj/Debug/net8.0/RealTimeButtonDemo.Shared.sourcelink.json
+/home/cihat/RealTimeButtonDemo/src/RealTimeButtonDemo.Shared/obj/Debug/net8.0/staticwebassets.build.json
+/home/cihat/RealTimeButtonDemo/src/RealTimeButtonDemo.Shared/obj/Debug/net8.0/staticwebassets.development.json
+/home/cihat/RealTimeButtonDemo/src/RealTimeButtonDemo.Shared/obj/Debug/net8.0/staticwebassets/msbuild.RealTimeButtonDemo.Shared.Microsoft.AspNetCore.StaticWebAssets.props
+/home/cihat/RealTimeButtonDemo/src/RealTimeButtonDemo.Shared/obj/Debug/net8.0/staticwebassets/msbuild.build.RealTimeButtonDemo.Shared.props
+/home/cihat/RealTimeButtonDemo/src/RealTimeButtonDemo.Shared/obj/Debug/net8.0/staticwebassets/msbuild.buildMultiTargeting.RealTimeButtonDemo.Shared.props
+/home/cihat/RealTimeButtonDemo/src/RealTimeButtonDemo.Shared/obj/Debug/net8.0/staticwebassets/msbuild.buildTransitive.RealTimeButtonDemo.Shared.props
+/home/cihat/RealTimeButtonDemo/src/RealTimeButtonDemo.Shared/obj/Debug/net8.0/staticwebassets.pack.json
+/home/cihat/RealTimeButtonDemo/src/RealTimeButtonDemo.Shared/obj/Debug/net8.0/scopedcss/bundle/RealTimeButtonDemo.Shared.styles.css
