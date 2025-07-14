@@ -71,7 +71,7 @@
 
     private async Task InitializeSignalR()
     {
-        var baseUrl = ApiBaseUrl ?? "http://localhost:5000";
+        var baseUrl = ApiBaseUrl ?? "http://localhost:5293";
         var hubUrl = $"{baseUrl}/buttonhub";
         
         hubConnection = new HubConnectionBuilder()
