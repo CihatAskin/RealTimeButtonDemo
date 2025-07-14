@@ -1093,3 +1093,4 @@
 /home/cihat/RealTimeButtonDemo/src/RealTimeButtonDemo.Web/obj/Debug/net8.0/refint/RealTimeButtonDemo.Web.dll
 /home/cihat/RealTimeButtonDemo/src/RealTimeButtonDemo.Web/obj/Debug/net8.0/RealTimeButtonDemo.Web.pdb
 /home/cihat/RealTimeButtonDemo/src/RealTimeButtonDemo.Web/obj/Debug/net8.0/ref/RealTimeButtonDemo.Web.dll
+/home/cihat/RealTimeButtonDemo/src/RealTimeButtonDemo.Web/obj/Debug/net8.0/RealTimeButtonDemo.Web.sourcelink.json

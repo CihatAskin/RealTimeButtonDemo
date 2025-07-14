@@ -1,11 +1,23 @@
 {
   "Version": 1,
-  "Hash": "+F6j5Ad0Xy78go2bQ3dvQd0+XbavGnMB18fYgjaqa6k=",
+  "Hash": "D4pt6ZaVyt4QoTpq590e44ornTrA2kPHk8tVEG2URs4=",
   "Source": "RealTimeButtonDemo.Web",
   "BasePath": "/",
   "Mode": "Root",
   "ManifestType": "Build",
-  "ReferencedProjectsConfiguration": [],
+  "ReferencedProjectsConfiguration": [
+    {
+      "Identity": "/home/cihat/RealTimeButtonDemo/src/RealTimeButtonDemo.Shared/RealTimeButtonDemo.Shared.csproj",
+      "Version": 2,
+      "Source": "RealTimeButtonDemo.Shared",
+      "GetPublishAssetsTargets": "ComputeReferencedStaticWebAssetsPublishManifest;GetCurrentProjectPublishStaticWebAssetItems",
+      "AdditionalPublishProperties": "",
+      "AdditionalPublishPropertiesToRemove": "WebPublishProfileFile;TargetFramework;RuntimeIdentifier;SelfContained",
+      "GetBuildAssetsTargets": "GetCurrentProjectBuildStaticWebAssetItems",
+      "AdditionalBuildProperties": "",
+      "AdditionalBuildPropertiesToRemove": "WebPublishProfileFile;TargetFramework;RuntimeIdentifier;SelfContained"
+    }
+  ],
   "DiscoveryPatterns": [
     {
       "Name": "RealTimeButtonDemo.Web/wwwroot",

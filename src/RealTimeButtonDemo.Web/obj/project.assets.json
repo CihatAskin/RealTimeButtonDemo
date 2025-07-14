@@ -715,6 +715,10 @@
       "RealTimeButtonDemo.Shared/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "Microsoft.AspNetCore.Components.Web": "8.0.0",
+          "Microsoft.AspNetCore.SignalR.Client": "8.0.0"
+        },
         "compile": {
           "bin/placeholder/RealTimeButtonDemo.Shared.dll": {}
         },
@@ -1431,6 +1435,10 @@
       "RealTimeButtonDemo.Shared/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "Microsoft.AspNetCore.Components.Web": "8.0.0",
+          "Microsoft.AspNetCore.SignalR.Client": "8.0.0"
+        },
         "compile": {
           "bin/placeholder/RealTimeButtonDemo.Shared.dll": {}
         },
